@@ -1,0 +1,9 @@
+#section{
+    background: url(/img/bg-consumo.png);
+    background-size: cover;
+    background-position: center;
+}
+
+h2, strong{
+    color: #7D0C7E !important;
+}

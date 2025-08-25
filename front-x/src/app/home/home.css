@@ -1,0 +1,10 @@
+  .main {
+    background: url('/img/background-xtrim.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .titulo {
+    color: #7d0c7e;
+    font-weight: 700;
+  }

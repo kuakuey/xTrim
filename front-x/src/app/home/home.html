@@ -1,0 +1,52 @@
+<div class="container-fluid vh-100 main">
+  <div class="row h-100">
+    <!-- Formulario -->
+    <div class="col-md-6 d-flex align-items-center justify-content-center">
+      <div class="p-5 bg-light rounded-5 d-flex flex-column align-items-center">
+        <h2 class="mb-5 titulo">Visualización<br />de Consumo</h2>
+        <form class="w-100" (ngSubmit)="consultarConsumo()">
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="cedula"
+              [(ngModel)]="cedula"
+              name="cedula"
+              placeholder="Ingresa tu cédula"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary w-100 fw-bold">Consultar</button>
+        </form>
+
+        <img src="/img/xtrim.png" alt="" class="w-50 mt-4" />
+      </div>
+    </div>
+
+    <!-- Parte derecha donde se muestran resultados -->
+    <div class="col-md-6 ">
+    </div>
+  </div>
+
+</div>
+
+<!-- Modal Angular puro -->
+<div *ngIf="mostrarModal" class="modal-backdrop" style="background: #0000006e !important;">
+  <div class="modal d-block" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Usuario no encontrado</h5>
+          <button type="button" class="btn-close" (click)="cerrarModal()"></button>
+        </div>
+        <div class="modal-body">
+          No se encontró ningún usuario con la cédula ingresada. Por favor verifica e intenta nuevamente.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" (click)="cerrarModal()">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
